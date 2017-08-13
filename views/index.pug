@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1= title
+    table.table.table-bordered.table-striped
+        thead
+            tr
+                th.col-sm-2 Name
+                th.col-sm-10 Value
+        tbody
+            for header in headers
+                tr
+                    td
+                        a(href="https://developer.mozilla.org/docs/Web/HTTP/Headers/"+header.name, target="_blank")= header.name
+                    td= header.value
